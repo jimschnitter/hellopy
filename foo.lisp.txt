@@ -1,0 +1,15 @@
+ words.py - better way to look up words
+# Version: 4
+
+import fileinput
+import sys
+import re
+
+def validate_password(password):
+    passwordRegex = re.compile('.+,.+,.+')
+    mo = passwordRegex.search(password)
+
+    if (mo):
+        return True
+    else:
+        return False

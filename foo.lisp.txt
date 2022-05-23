@@ -1,5 +1,5 @@
  words.py - better way to look up words
-# Version: 6
+# Version: 7
 
 import fileinput
 import sys

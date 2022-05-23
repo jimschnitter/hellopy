@@ -1,5 +1,5 @@
  words.py - better way to look up words
-# Version: 4
+# Version: 5
 
 import fileinput
 import sys
@@ -13,3 +13,5 @@ def validate_password(password):
         return True
     else:
         return False
+        
+        

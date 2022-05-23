@@ -1,0 +1,41 @@
+testMilestoneBuildNoDiffs -> testArchiveMilestoneFiles
+[1st set of MS]
+
+testArchiveMilestoneFiles -> testThreatRiskAccumulative
+
+testThreatRiskAccumulative -> testMilestoneBuild
+
+testMilestoneBuild -> testBCISMilestoneEmbeddedRegex, testBcwfMilestoneEmbeddedRegex, testBcwfMilestoneApplicationNoActionUrl,
+[2nd set of MS's]     testBcwfMilestoneApplicatioActionUrl, testBcwfMilestoneApplicationUrlWithRegex, testBcwfMilestoneUrlRecord,
+					  testBcisMilestoneUrlRecord, testBcisMilestoneApplicationNoActionUrl, testBcisMilestoneApplicationNoActionUrl,
+					  testBcisMilestoneApplicationActionUrl, testBcisMilestoneApplicationUrlWithRegex, testBcisMilestoneAddApplicationAttribute,
+					  testBcisMilestoneUrlRecord
+					  
+testBcisMilestoneUrlRecord -> testBCISDiffs,  testBCWFDiffs			
+
+...
+
+testBCWFDiffs -> testNoAccumulative, testBcwfDifferentialUrlRecord
+
+testNoAccumulative -> testCatAccumulative
+
+testCatAccumulative -> testCatNewRecordAccumulative
+
+testCatNewRecordAccumulative -> testBothAccumulative
+
+testBothAccumulative -> testArchiveBothAccumulativeFiles
+
+testArchiveBothAccumulativeFiles -> testThreatRiskAccumulativePassesCorrectRL
+
+testThreatRiskAccumulativePassesCorrectRL -> testThreatRiskAccumulativeFailsIncorrectRL, testCategoryAccumulativeNoCategory90
+
+testCategoryAccumulativeNoCategory90 -> testThreatRiskMilestoneFailsMissingRL		  
+
+testThreatRiskMilestoneFailsMissingRL -> testMilestoneBuildCatMap
+
+testMilestoneBuildCatMap -> testBcisMilestoneUrlRecordCatMap
+[3rd set of MS's]
+
+testBcisMilestoneUrlRecordCatMap -> testBcwfMilestoneUrlRecordCatMap
+
+testBcwfMilestoneUrlRecordCatMap -> testValidationSpans
